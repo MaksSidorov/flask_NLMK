@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <form method="post">
+		<table>
+			{% for item in my_table%}
+				<tr>
+					<td><textarea rows="3" name="col1_{{ loop.index }}">{{item.col1}}</textarea></td>
+					<td><textarea rows="3" name="col2_{{ loop.index }}">{{item.col2}}</textarea></td>
+					<td><textarea rows="3" name="col3_{{ loop.index }}">{{item.col3}}</textarea></td>
+					<td><textarea rows="3" name="col4_{{ loop.index }}">{{item.col4}}</textarea></td>
+					<td><textarea rows="3" name="col5_{{ loop.index }}">{{item.col5}}</textarea></td>
+				</tr>
+			{% endfor %}
+		</table>
+		<button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
+    </body>
+</html>
